@@ -6,7 +6,7 @@ const cancelBtn = document.getElementById("btn-cancel");
 const checkoutForm = document.getElementById("checkout-form");
 
 // ⚠️ REEMPLAZA ESTA URL CON LA URL DE TU GOOGLE APPS SCRIPT
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbydludWDSeESG4xbRnrRQwLFTTz-Tcnn-OYMHOoM7z62KuPpA_EqfH_ulmALa80eMz1CA/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzKHjV2322hPRRSJXV4iLV2UeReNWJXhIgdOXQ800QPR_Xh-EQkakXyHhFw0JS5qei8og/exec";
 
 
 //agregarndo funcion para bs para cada juego
@@ -214,5 +214,6 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     submitBtn.disabled = false;
     submitBtn.textContent = "Finalizar Compra";
   }
+
 
 });
