@@ -6,7 +6,7 @@ const cancelBtn = document.getElementById("btn-cancel");
 const checkoutForm = document.getElementById("checkout-form");
 
 // ⚠️ REEMPLAZA ESTA URL CON LA URL DE TU GOOGLE APPS SCRIPT
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzKHjV2322hPRRSJXV4iLV2UeReNWJXhIgdOXQ800QPR_Xh-EQkakXyHhFw0JS5qei8og/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbydludWDSeESG4xbRnrRQwLFTTz-Tcnn-OYMHOoM7z62KuPpA_EqfH_ulmALa80eMz1CA/exec";
 
 
 //agregarndo funcion para bs para cada juego
@@ -71,6 +71,7 @@ cancelBtn.addEventListener("click", () => {
   document.getElementById("form-freefire").style.display = "none";
   document.getElementById("form-roblox").style.display = "none";
   document.getElementById("form-ml").style.display = "none";
+  document.getElementById("qr-image").src = "img/qr-banco-economico.png"; // Resetear imagen QR al cancelar
   //🆕NUEVO AGREGADO FIN
 });
 
@@ -215,5 +216,16 @@ checkoutForm.addEventListener("submit", async (e) => { //funciones complejas de 
     submitBtn.textContent = "Finalizar Compra";
   }
 
+});
+// Cambiar imagen según producto seleccionado
+const selectsConImagen = ["ff-product", "roblox-product", "ml-product"];
+const qrImage = document.getElementById("qr-image");
+const defaultQR = "img/qr-banco-economico.png";
 
+selectsConImagen.forEach(selectId => {
+  document.getElementById(selectId).addEventListener("change", function () {
+    const selectedOption = this.options[this.selectedIndex];
+    const img = selectedOption.getAttribute("data-img");
+    qrImage.src = img ? img : defaultQR;
+  });
 });
