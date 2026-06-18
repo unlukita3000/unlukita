@@ -6,7 +6,7 @@ const cancelBtn = document.getElementById("btn-cancel");
 const checkoutForm = document.getElementById("checkout-form");
 
 // ⚠️ REEMPLAZA ESTA URL CON LA URL DE TU GOOGLE APPS SCRIPT
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbydludWDSeESG4xbRnrRQwLFTTz-Tcnn-OYMHOoM7z62KuPpA_EqfH_ulmALa80eMz1CA/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxiv4fYHPKaQw3RbragLW3lnQZr4HBkqfU7CkfBH_Hovh3_EmzTVa_8-KGDgLmjy9I6Og/exec";
 
 
 //agregarndo funcion para bs para cada juego
