@@ -229,3 +229,4 @@ selectsConImagen.forEach(selectId => {
     qrImage.src = img ? img : defaultQR;
   });
 });
+
